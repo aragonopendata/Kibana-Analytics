@@ -1,0 +1,20 @@
+<div>
+  <div class="vis-option-item">
+    <label for="visualizeBasicSettingsLegendPosition">
+      Legend Position
+    </label>
+    <select
+      id="visualizeBasicSettingsLegendPosition"
+      class="form-control"
+      ng-model="vis.params.legendPosition"
+      ng-options="position.value as position.text for position in vis.type.editorConfig.collections.legendPositions"
+    >
+    </select>
+  </div>
+  <div class="vis-option-item">
+    <label id="visualizeBasicSettingsShowTooltip">
+      <input type="checkbox" ng-model="vis.params.addTooltip">
+      Show Tooltip
+    </label>
+  </div>
+</div>
