@@ -108,7 +108,21 @@ UrlFormat.prototype._convert = {
           linkLabel = label;
         }
 
+        //DxD Custom
+        linkLabel = linkLabel.substring(7,linkLabel.length);
+        var splited = linkLabel.split("/");
+        if (splited.length > 5) {
+          linkLabel = splited[0] +"/" +  splited[1] +"/.../" +  splited[splited.length-2] + "/" + splited[splited.length-1];
+        }
+        linkLabel = "http://" + linkLabel;
+        if(linkLabel.length > 115){
+          linkLabel = linkLabel.substring(0,115) + "...";
+        }
+        //END DxD Custom
+
         return `<a href="${url}" target="_blank">${linkLabel}</a>`;
     }
   }
 };
+
+
