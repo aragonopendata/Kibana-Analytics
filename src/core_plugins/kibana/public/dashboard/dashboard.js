@@ -318,7 +318,9 @@ app.directive('dashboardApp', function ($injector) {
         }).catch(notify.error);
       };
 
-      $scope.showFilterBar = () => filterBar.getFilters().length > 0 || !$scope.fullScreenMode;
+      $scope.showFilterBar = () => $scope.fullScreenMode;
+      //$scope.showFilterBar = () => filterBar.getFilters().length > 0 || !$scope.fullScreenMode;
+      
       let onRouteChange;
       const setFullScreenMode = (fullScreenMode) => {
         $scope.fullScreenMode = fullScreenMode;
