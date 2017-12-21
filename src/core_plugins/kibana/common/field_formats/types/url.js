@@ -115,8 +115,8 @@ UrlFormat.prototype._convert = {
           linkLabel = splited[0] +"/" +  splited[1] +"/.../" +  splited[splited.length-2] + "/" + splited[splited.length-1];
         }
         linkLabel = "http://" + linkLabel;
-        if(linkLabel.length > 115){
-          linkLabel = linkLabel.substring(0,115) + "...";
+        if(linkLabel.length > 100){
+          linkLabel = linkLabel.substring(0,100) + "...";
         }
         //END DxD Custom
 
