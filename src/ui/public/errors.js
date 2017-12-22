@@ -262,7 +262,7 @@ export class InvalidWiggleSelection extends VislibError {
 
 export class PieContainsAllZeros extends VislibError {
   constructor() {
-    super('No results displayed because all values equal 0.');
+    super('No hay resultados disponibles');
   }
 }
 
@@ -280,6 +280,6 @@ export class StackedBarChartConfig extends VislibError {
 
 export class NoResults extends VislibError {
   constructor() {
-    super('No results found');
+    super('No hay resultados disponibles');
   }
 }
