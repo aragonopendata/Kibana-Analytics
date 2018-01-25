@@ -50,13 +50,13 @@ export function MapsVisualizationProvider(serviceSettings, Notifier, getAppState
         }
         if (status.params || status.aggs) await this._updateParams();
 
-        if (esResponse && typeof esResponse.geohashGridAgg === 'undefined') {
-          return resolve();
-        }
+        //if (esResponse && typeof esResponse.geohashGridAgg === 'undefined') {
+        //  return resolve();
+        //}
 
-        if (status.data) {
+        //if (status.data) {
           this._recreateGeohashLayer(esResponse);
-        }
+        //}
         if (status.uiState) {
           this._kibanaMap.useUiStateFromVisualization(this.vis);
         }
